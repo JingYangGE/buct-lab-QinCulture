@@ -1,0 +1,16 @@
+RDFS:
+  推理相关：
+  subPropertyOf关系传播（扩展检索） (类似subClassOf)  
+           eg. CONSTRUCT{?x ?r ?y.} WHERE{?x ?q ?y. ?q rdfs:subPropertyOf ?r} 表示满足subPropertyOf的属性r可替换原来的属性q,比如“兄弟关系”和“兄弟姐妹关系”  
+           eg. :isEmployedby rdfs:subPropertyOf worksFor
+  domain和range定义数据  triad主语来自一个class，宾语来自一个class,domain表示定义域，range表示值域。
+           eg.for property "P" subject is "D",object is "R" then triad is：
+           :P rdfs:domain :D.
+           :P rdfs:range :R.
+  subClassOf关联domain和range.   eg. :marriedWoman rdfs:subClassOf :Woman. :hasMaidenName rdfs:domain :MarriedWoman.有此可推断任意拥有hasMaidenName
+                                     属性的对象均属于Woman.
+  推理无关：
+  label 标签属性，方便应用程序与模型交互
+  seeAlso 交叉引用文件
+  isDefinedBy 组织词汇
+  comment 模型文档
