@@ -1,0 +1,2 @@
+保存模型：publish-->Model  或者直接点击对勾即可  存于文件夹models-autosave下
+打开模型：Apply R2RML Model-->fromFile
